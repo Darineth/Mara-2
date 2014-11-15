@@ -1,0 +1,2 @@
+qmake -project -t vcapp -o MaraServer.pro "CONFIG += thread" "QT += core gui network script" "DESTDIR=../bin" "INCLUDEPATH += ../MaraLib/include;./include" "UI_HEADERS_DIR = ./include/ui" "UI_SOURCES_DIR = ./src" "CONFIG(debug, debug|release) { LIBS += ../lib/MaraLibD.lib }" "CONFIG(debug, debug|release) { DEFINES += __DEBUG__ }" "CONFIG(release, debug|release) { LIBS += ../lib/MaraLib.lib }" "RC_FILE = ./resources/MaraServer.rc" "QMAKE_POST_LINK = $(TargetDir)..\util\ReplaceVistaIcon.exe $(TargetPath) $(TargetDir)..\icons\Mara2Server.ico"
+qmake -spec win32-msvc2010

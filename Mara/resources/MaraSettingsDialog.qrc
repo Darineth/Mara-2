@@ -1,0 +1,9 @@
+<RCC>
+  <qresource>
+    <file>images/templates.png</file>
+    <file>images/Mara.png</file>
+    <file>images/macros.png</file>
+    <file>images/config.png</file>
+    <file>images/fonts.png</file>
+  </qresource>
+</RCC>

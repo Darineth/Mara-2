@@ -1,0 +1,232 @@
+<ui version="4.0" >
+ <class>MaraWindow</class>
+ <widget class="QMainWindow" name="MaraWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Mara 2</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>21</y>
+     <width>800</width>
+     <height>560</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout" >
+    <property name="margin" >
+     <number>0</number>
+    </property>
+    <item row="0" column="0" >
+     <widget class="QTabWidget" name="qtwTabs" >
+      <property name="tabPosition" >
+       <enum>QTabWidget::West</enum>
+      </property>
+      <property name="currentIndex" >
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="qwWelcomeTab" >
+       <property name="geometry" >
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>773</width>
+         <height>554</height>
+        </rect>
+       </property>
+       <attribute name="title" >
+        <string>Welcome to Mara 2</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout" >
+        <property name="spacing" >
+         <number>0</number>
+        </property>
+        <property name="margin" >
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWebView" name="qwvWelcome" >
+          <property name="url" >
+           <url>
+            <string>http://mara.pretoast.com/Welcome/</string>
+           </url>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QProgressBar" name="qpbWelcomeProgress" >
+          <property name="maximumSize" >
+           <size>
+            <width>16777215</width>
+            <height>10</height>
+           </size>
+          </property>
+          <property name="value" >
+           <number>0</number>
+          </property>
+          <property name="textVisible" >
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="qmbMenuBar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="qmFile" >
+    <property name="title" >
+     <string>&amp;File</string>
+    </property>
+    <addaction name="qaSettings" />
+    <addaction name="qaUpdate" />
+    <addaction name="qaExit" />
+   </widget>
+   <widget class="QMenu" name="qmServer" >
+    <property name="title" >
+     <string>&amp;Server</string>
+    </property>
+    <addaction name="qaConnect" />
+    <addaction name="qaDisconnect" />
+   </widget>
+   <widget class="QMenu" name="qmChat" >
+    <property name="title" >
+     <string>&amp;Chat</string>
+    </property>
+    <addaction name="qaFind" />
+    <addaction name="qaFreeze" />
+    <addaction name="qaClear" />
+   </widget>
+   <widget class="QMenu" name="qmDebug" >
+    <property name="title" >
+     <string>Debug</string>
+    </property>
+    <addaction name="qaDebugChatWidget" />
+    <addaction name="qaDebugChannelWidget" />
+    <addaction name="qaDebugNetTest" />
+   </widget>
+   <addaction name="qmFile" />
+   <addaction name="qmServer" />
+   <addaction name="qmChat" />
+   <addaction name="qmDebug" />
+  </widget>
+  <widget class="QStatusBar" name="qsbStatusBar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>581</y>
+     <width>800</width>
+     <height>19</height>
+    </rect>
+   </property>
+  </widget>
+  <action name="qaSettings" >
+   <property name="text" >
+    <string>&amp;Settings</string>
+   </property>
+  </action>
+  <action name="qaExit" >
+   <property name="text" >
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="qaConnect" >
+   <property name="text" >
+    <string>Connect</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="qaDisconnect" >
+   <property name="text" >
+    <string>Disconnect</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="qaFind" >
+   <property name="text" >
+    <string>Find</string>
+   </property>
+  </action>
+  <action name="qaFreeze" >
+   <property name="text" >
+    <string>Freeze</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="qaClear" >
+   <property name="text" >
+    <string>Clear</string>
+   </property>
+  </action>
+  <action name="qaUpdate" >
+   <property name="text" >
+    <string>&amp;Update</string>
+   </property>
+  </action>
+  <action name="qaDebugChatWidget" >
+   <property name="text" >
+    <string>Chat Widget</string>
+   </property>
+  </action>
+  <action name="qaDebugChannelWidget" >
+   <property name="text" >
+    <string>Channel Widget</string>
+   </property>
+  </action>
+  <action name="qaDebugNetTest" >
+   <property name="text" >
+    <string>NetTest</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKit/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>qwvWelcome</sender>
+   <signal>loadProgress(int)</signal>
+   <receiver>qpbWelcomeProgress</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>409</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>409</x>
+     <y>563</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

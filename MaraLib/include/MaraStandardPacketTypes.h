@@ -1,0 +1,33 @@
+#ifndef MARASTANDARDPACKETTYPES_H
+#define MARASTANDARDPACKETTYPES_H
+
+namespace Mara
+{
+	namespace StandardPacketTypes
+	{
+		enum MaraStandardPackets
+		{
+			TEST,
+			UNKNOWN,
+			RESPONSE,
+			CLIENTVERSION,
+			USERLOGIN,
+			USERCONNECT,
+			USERDISCONNECT,
+			KICK,
+			JOINCHANNEL,
+			LEAVECHANNEL,
+			USERUPDATE,
+			CHAT,
+			EMOTE,
+			AWAY,
+			MESSAGE,
+			PING,
+			PLUGINDATA,
+			SERVERCOMMAND,
+			UNKNOWNUSER
+		};
+	}
+};
+
+#endif

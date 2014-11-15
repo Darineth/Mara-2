@@ -1,0 +1,2 @@
+qmake -project -t vcapp -o MaraUpdater.pro "CONFIG += thread" "QT += core gui network" "DESTDIR=../bin" "INCLUDEPATH += ./include" "UI_HEADERS_DIR = ./include/ui" "UI_SOURCES_DIR = ./src"  "CONFIG(debug, debug|release) { DEFINES += __DEBUG__ }" "RC_FILE = ./resources/MaraUpdater.rc" "QMAKE_POST_LINK = $(TargetDir)..\util\ReplaceVistaIcon.exe $(TargetPath) $(TargetDir)..\icons\Mara2Updater.ico"
+qmake -spec win32-msvc2010

@@ -1,0 +1,3 @@
+qmake -project -t $$TEMPLATE -o MaraClient.pro -after "CONFIG += core thread dll" "QT += network script" "DESTDIR=../lib" "INCLUDEPATH += ./include;../MaraLib/include" "TEMPLATE = vclib" "TARGET = MaraClient" "CONFIG(release, debug|release) { TARGET = MaraClient }" "CONFIG(debug, debug|release) { TARGET = $$join(TARGET,,,D) }" "DEFINES += __MARACLIENTDLL__" "CONFIG(debug, debug|release) { DEFINES += __DEBUG__ }" "CONFIG(debug, debug|release) { LIBS += ../lib/MaraLibD.lib }" "CONFIG(release, debug|release) { LIBS += ../lib/MaraLib.lib }" "win32:MAKEFILE = MaraClient" "QMAKE_POST_LINK = copy $(TargetDir)$(TargetName).dll $(TargetDir)..\bin"
+qmake -spec win32-msvc2010
+

@@ -1,0 +1,1454 @@
+<ui version="4.0" >
+ <class>MaraSettingsDialog</class>
+ <widget class="QDialog" name="MaraSettingsDialog" >
+  <property name="windowModality" >
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>553</width>
+    <height>622</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle" >
+   <string>Settings</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4" >
+   <property name="margin" >
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QListWidget" name="qlwPages" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize" >
+      <size>
+       <width>0</width>
+       <height>93</height>
+      </size>
+     </property>
+     <property name="maximumSize" >
+      <size>
+       <width>16777215</width>
+       <height>93</height>
+      </size>
+     </property>
+     <property name="frameShape" >
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow" >
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="flow" >
+      <enum>QListView::LeftToRight</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="qswPages" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentIndex" >
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="qwpConnection" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>553</width>
+        <height>488</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout" >
+       <item>
+        <widget class="QGroupBox" name="qgpUser" >
+         <property name="sizePolicy" >
+          <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title" >
+          <string>User Options</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4" >
+          <item row="0" column="1" colspan="4" >
+           <widget class="QLineEdit" name="qleUserName" >
+            <property name="toolTip" >
+             <string>Your raw username, allowing you to enter chat codes to format your name with colors, etc.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" >
+           <widget class="QLabel" name="qlbUserName" >
+            <property name="text" >
+             <string>Username</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="3" >
+           <widget class="QLineEdit" name="qleTextName" >
+            <property name="toolTip" >
+             <string>The simplified version of your name for use with messaging and such.</string>
+            </property>
+            <property name="readOnly" >
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" >
+           <widget class="QLabel" name="qlbTextName" >
+            <property name="text" >
+             <string>Simple Name</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" colspan="3" >
+           <widget class="MTextBrowser" name="mtbChatName" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Minimum" hsizetype="Preferred" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>16777215</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="acceptDrops" >
+             <bool>false</bool>
+            </property>
+            <property name="toolTip" >
+             <string>Your username as it will be displayed in chat.</string>
+            </property>
+            <property name="verticalScrollBarPolicy" >
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy" >
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="textInteractionFlags" >
+             <set>Qt::TextSelectableByMouse</set>
+            </property>
+            <property name="openLinks" >
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="4" >
+           <widget class="QLabel" name="qlbAvatar" >
+            <property name="minimumSize" >
+             <size>
+              <width>64</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="maximumSize" >
+             <size>
+              <width>64</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="frameShape" >
+             <enum>QFrame::WinPanel</enum>
+            </property>
+            <property name="frameShadow" >
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text" >
+             <string>No Avatar</string>
+            </property>
+            <property name="scaledContents" >
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4" >
+           <widget class="QPushButton" name="qpbBrowseAvatar" >
+            <property name="maximumSize" >
+             <size>
+              <width>64</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text" >
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" colspan="2" >
+           <widget class="QLineEdit" name="qleUserToken" >
+            <property name="toolTip" >
+             <string>Your current user token.  This token is used to identify you with the server even if you change your username.  It allows identification if your IP changes or somesuch.</string>
+            </property>
+            <property name="inputMask" >
+             <string>>NNNNN-NNNNN-NNNNN-NNNNN-NNNNN;_</string>
+            </property>
+            <property name="readOnly" >
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3" colspan="2" >
+           <widget class="QPushButton" name="qpbGenerateToken" >
+            <property name="text" >
+             <string>Generate New Token</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" >
+           <widget class="QLabel" name="qlbUserToken" >
+            <property name="text" >
+             <string>User Token</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" >
+           <widget class="QCheckBox" name="qcbAllowUserFonts" >
+            <property name="toolTip" >
+             <string>If disabled, all other users will be displayed in the default font, rather than the font they are actually using.</string>
+            </property>
+            <property name="text" >
+             <string>Allow User Fonts</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1" >
+           <widget class="QCheckBox" name="qcbShowJoinLeave" >
+            <property name="toolTip" >
+             <string>Toggles the display of messages when users join/leave chat channels.</string>
+            </property>
+            <property name="text" >
+             <string>Join/Leave Messages</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2" colspan="2" >
+           <widget class="QCheckBox" name="qcbMessageWindows" >
+            <property name="text" >
+             <string>Private Message Windows</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="4" >
+           <widget class="QCheckBox" name="qcbLocalEcho" >
+            <property name="toolTip" >
+             <string>Echo your own chat immediatelly, rather than waiting for it to return from the server.</string>
+            </property>
+            <property name="text" >
+             <string>Local Echo</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0" >
+           <widget class="QCheckBox" name="qcbTimestamps" >
+            <property name="toolTip" >
+             <string>Enables timestamps on chat messages.</string>
+            </property>
+            <property name="text" >
+             <string>Timestamps</string>
+            </property>
+            <property name="checked" >
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item rowspan="2" row="5" column="1" colspan="4" >
+           <layout class="QGridLayout" name="gridLayout_6" >
+            <item row="1" column="0" >
+             <widget class="QLineEdit" name="qleLogFile" >
+              <property name="toolTip" >
+               <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The log filename template is built using the current date/time when a line is logged, allowing the chat log to be automatically split by day, month, year, etc.&lt;/p>
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;/p>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">Log Filename Options:&lt;/span>&lt;/p>
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;/p>
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;/p>
+&lt;table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">%d&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The day as number without a leading zero (1 to 31).&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">%dd&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The day as number with a leading zero (01 to 31).&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">%ddd&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The abbreviated localized day name (e.g. 'Mon' to 'Sun').&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">%dddd&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The long localized day name (e.g. 'Monday' to 'Sunday').&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">%m&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The month as number without a leading zero (1-12).&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">%mm&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The month as number with a leading zero (01-12).&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">%mmm&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The abbreviated localized month name (e.g. 'Jan' to 'Dec').&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">%mmmm  &lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The long localized month name (e.g. 'January' to 'December').&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">%yy&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The year as two digit number (00-99).&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">%yyyy&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The year as four digit number.&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">%c&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The name of the logged chat channel.&lt;/p>&lt;/td>&lt;/tr>&lt;/table>&lt;/body>&lt;/html></string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1" >
+             <widget class="QLineEdit" name="qleCurrentLogFile" >
+              <property name="toolTip" >
+               <string>An example of the entered log filename using the current date/time.</string>
+              </property>
+              <property name="readOnly" >
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" >
+             <widget class="QLineEdit" name="qleTimestampFormat" >
+              <property name="toolTip" >
+               <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">Timestamp Format Options:&lt;/span>&lt;/p>
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;/p>
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;/p>
+&lt;table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">h&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">hh&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">m&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The minute without a leading zero (0 to 59)&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">mm   &lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The minute with a leading zero (00 to 59)&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">s&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The second without a leading zero (0 to 59)&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">ss&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The second with a leading zero (00 to 59)&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">z&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The milliseconds without leading zeroes (0 to 999)&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">zzz&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">The milliseconds with leading zeroes (000 to 999)&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">AP&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">Force the timestamp to use AM/PM display. &lt;span style=" font-style:italic;">AP&lt;/span> will be replaced by either "AM" or "PM".&lt;/p>&lt;/td>&lt;/tr>
+&lt;tr>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-weight:600;">ap&lt;/span>&lt;/p>&lt;/td>
+&lt;td style=" vertical-align:top;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">Force the timestamp to use am/pm display. &lt;span style=" font-style:italic;">ap&lt;/span> will be replaced by either "am" or "pm".&lt;/p>&lt;/td>&lt;/tr>&lt;/table>
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;/p>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">Note: The timestamp also supports Qt's DateTime date format options as well, allowing you to put the date in the chat timestamp as well.  Literal characters may be entered by single quoting them (i.e. 'ap' will insert raw text "ap" rather than the am/pm display).&lt;/p>&lt;/body>&lt;/html></string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1" >
+             <widget class="QLineEdit" name="qleCurrentTimestamp" >
+              <property name="readOnly" >
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="6" column="0" >
+           <widget class="QCheckBox" name="qcbLogging" >
+            <property name="toolTip" >
+             <string>Enables file logging of chat.</string>
+            </property>
+            <property name="text" >
+             <string>Chat Logging</string>
+            </property>
+            <property name="checked" >
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+         <zorder>qleUserName</zorder>
+         <zorder>qlbUserName</zorder>
+         <zorder>qleTextName</zorder>
+         <zorder>qlbTextName</zorder>
+         <zorder>mtbChatName</zorder>
+         <zorder>qlbAvatar</zorder>
+         <zorder>qpbBrowseAvatar</zorder>
+         <zorder>qleUserToken</zorder>
+         <zorder>qpbGenerateToken</zorder>
+         <zorder>qlbUserToken</zorder>
+         <zorder>qcbAllowUserFonts</zorder>
+         <zorder>qcbShowJoinLeave</zorder>
+         <zorder>qcbMessageWindows</zorder>
+         <zorder>qcbLocalEcho</zorder>
+         <zorder>qcbTimestamps</zorder>
+         <zorder></zorder>
+         <zorder>qcbLogging</zorder>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="qgpConnection" >
+         <property name="sizePolicy" >
+          <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title" >
+          <string>Connection</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5" >
+          <property name="sizeConstraint" >
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <property name="verticalSpacing" >
+           <number>6</number>
+          </property>
+          <item row="0" column="0" >
+           <layout class="QGridLayout" name="gridLayout_2" >
+            <item row="0" column="0" >
+             <widget class="QLabel" name="qlbServer" >
+              <property name="text" >
+               <string>Server</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" >
+             <widget class="QLabel" name="qlbBackupServer" >
+              <property name="text" >
+               <string>Backup Server</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1" >
+             <widget class="QLineEdit" name="qleServer" />
+            </item>
+            <item row="1" column="1" >
+             <widget class="QLineEdit" name="qleBackupServer" >
+              <property name="toolTip" >
+               <string>The listed backup server will be connected to if the primary server fails.  This field is not editable, and is instead controlled by the primary server's configuration.</string>
+              </property>
+              <property name="readOnly" >
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2" colspan="2" >
+             <widget class="QCheckBox" name="qcbHeartbeat" >
+              <property name="toolTip" >
+               <string>Enables a keepalive ping mechanism to ensure server connectivity is active.  Time between heartbeats is configurable.</string>
+              </property>
+              <property name="text" >
+               <string>Enable Client Heartbeat</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2" >
+             <widget class="QLabel" name="qlbHeartbeat" >
+              <property name="text" >
+               <string>Heartbeat Timeout</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3" >
+             <widget class="QLineEdit" name="qleHeartbeatTimeout" >
+              <property name="maximumSize" >
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="maxLength" >
+               <number>6</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2" >
+             <widget class="QLabel" name="qlbDataPort" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>50</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text" >
+               <string>Data Port</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3" >
+             <widget class="QLineEdit" name="qleDataPort" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="toolTip" >
+               <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:8pt;">A sideband port that may be open to your local computer to allow certain types of file transfers through Mara.&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+              </property>
+              <property name="maxLength" >
+               <number>5</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer" >
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0" >
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="qwpFonts" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>553</width>
+        <height>488</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2" >
+       <item>
+        <widget class="QGroupBox" name="qgpFonts" >
+         <property name="title" >
+          <string>Fonts and Colors</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout" >
+          <item row="0" column="0" >
+           <widget class="QLabel" name="qlbUser" >
+            <property name="text" >
+             <string>User</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" >
+           <widget class="QLineEdit" name="qleUserExample" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="autoFillBackground" >
+             <bool>true</bool>
+            </property>
+            <property name="text" >
+             <string>&lt;MaraUser> Itsa me!  MaraUser!</string>
+            </property>
+            <property name="readOnly" >
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2" >
+           <widget class="QPushButton" name="qpbUserColor" >
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text" >
+             <string>Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3" >
+           <widget class="QPushButton" name="qpbUserFont" >
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text" >
+             <string>Font</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" >
+           <widget class="QLabel" name="qlbDefault" >
+            <property name="text" >
+             <string>Default</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" >
+           <widget class="QLineEdit" name="qleDefaultExample" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="autoFillBackground" >
+             <bool>true</bool>
+            </property>
+            <property name="text" >
+             <string>&lt;Default> For boring people.</string>
+            </property>
+            <property name="readOnly" >
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2" >
+           <widget class="QPushButton" name="qpbDefaultColor" >
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text" >
+             <string>Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3" >
+           <widget class="QPushButton" name="qpbDefaultFont" >
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text" >
+             <string>Font</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" >
+           <widget class="QLabel" name="qlbMessage" >
+            <property name="text" >
+             <string>Message</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" >
+           <widget class="QLineEdit" name="qleMessageExample" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="autoFillBackground" >
+             <bool>true</bool>
+            </property>
+            <property name="text" >
+             <string>[Message] Psst...</string>
+            </property>
+            <property name="readOnly" >
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2" >
+           <widget class="QPushButton" name="qpbMessageColor" >
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text" >
+             <string>Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3" >
+           <widget class="QPushButton" name="qpbMessageFont" >
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text" >
+             <string>Font</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" >
+           <widget class="QLabel" name="qlbSystem" >
+            <property name="text" >
+             <string>System</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" >
+           <widget class="QLineEdit" name="qleSystemExample" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="autoFillBackground" >
+             <bool>true</bool>
+            </property>
+            <property name="text" >
+             <string>SERVER: World coming down. </string>
+            </property>
+            <property name="readOnly" >
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2" >
+           <widget class="QPushButton" name="qpbSystemColor" >
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text" >
+             <string>Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3" >
+           <widget class="QPushButton" name="qpbSystemFont" >
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text" >
+             <string>Font</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" >
+           <widget class="QLabel" name="qlbLink" >
+            <property name="text" >
+             <string>Link</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1" >
+           <widget class="QLineEdit" name="qleLinkExample" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font" >
+             <font>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="autoFillBackground" >
+             <bool>true</bool>
+            </property>
+            <property name="text" >
+             <string>http://mara.pretoast.com/Welcome/</string>
+            </property>
+            <property name="readOnly" >
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="2" colspan="2" >
+           <widget class="QPushButton" name="qpbBackgroundColor" >
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text" >
+             <string>Background Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1" >
+           <widget class="QCheckBox" name="qcbUserFontInEdit" >
+            <property name="text" >
+             <string>Use User font for Edit box</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2" >
+           <widget class="QPushButton" name="qpbLinkColor" >
+            <property name="minimumSize" >
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text" >
+             <string>Color</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+         <zorder>qlbUser</zorder>
+         <zorder>qleUserExample</zorder>
+         <zorder>qpbUserColor</zorder>
+         <zorder>qpbUserFont</zorder>
+         <zorder>qlbDefault</zorder>
+         <zorder>qleDefaultExample</zorder>
+         <zorder>qpbDefaultColor</zorder>
+         <zorder>qpbDefaultFont</zorder>
+         <zorder>qlbMessage</zorder>
+         <zorder>qleMessageExample</zorder>
+         <zorder>qpbMessageColor</zorder>
+         <zorder>qpbMessageFont</zorder>
+         <zorder>qlbSystem</zorder>
+         <zorder>qleSystemExample</zorder>
+         <zorder>qpbSystemColor</zorder>
+         <zorder>qpbSystemFont</zorder>
+         <zorder>qlbLink</zorder>
+         <zorder>qleLinkExample</zorder>
+         <zorder>qpbBackgroundColor</zorder>
+         <zorder>qcbUserFontInEdit</zorder>
+         <zorder>qpbLinkColor</zorder>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="qgbImage" >
+         <property name="title" >
+          <string>Image Options</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_7" >
+          <item row="0" column="0" colspan="2" >
+           <widget class="QLabel" name="label" >
+            <property name="text" >
+             <string>Note: Max sizes may be specified absolutely or as percentages.  Ex: 100%, 300</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" >
+           <widget class="QLabel" name="qlbImgMaxHeight" >
+            <property name="text" >
+             <string>Max Width</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" >
+           <widget class="QLineEdit" name="qleImageMaxHeight" />
+          </item>
+          <item row="1" column="1" >
+           <widget class="QLineEdit" name="qleImageMaxWidth" />
+          </item>
+          <item row="2" column="0" >
+           <widget class="QLabel" name="qlbImgMaxWidth" >
+            <property name="text" >
+             <string>Max Height</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2" >
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0" >
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+      <zorder>qgpFonts</zorder>
+      <zorder>verticalSpacer_2</zorder>
+      <zorder>qgbImage</zorder>
+      <zorder>qlbImgMaxWidth</zorder>
+     </widget>
+     <widget class="QWidget" name="qwpMacros" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>553</width>
+        <height>488</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3" >
+       <item>
+        <widget class="QGroupBox" name="qgbMacros" >
+         <property name="title" >
+          <string>Macros</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3" >
+          <property name="topMargin" >
+           <number>3</number>
+          </property>
+          <property name="bottomMargin" >
+           <number>9</number>
+          </property>
+          <property name="verticalSpacing" >
+           <number>6</number>
+          </property>
+          <item row="1" column="0" >
+           <widget class="QLabel" name="qlbF2" >
+            <property name="text" >
+             <string>F2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" >
+           <widget class="QLabel" name="qlbF1" >
+            <property name="text" >
+             <string>F1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" >
+           <widget class="QLabel" name="qlbF3" >
+            <property name="text" >
+             <string>F3</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" >
+           <widget class="QLabel" name="qlbF4" >
+            <property name="text" >
+             <string>F4</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" >
+           <widget class="QLabel" name="qlbF5" >
+            <property name="text" >
+             <string>F5</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0" >
+           <widget class="QLabel" name="qlbF6" >
+            <property name="text" >
+             <string>F6</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0" >
+           <widget class="QLabel" name="qlbF7" >
+            <property name="text" >
+             <string>F7</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0" >
+           <widget class="QLabel" name="qlbF8" >
+            <property name="text" >
+             <string>F8</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0" >
+           <widget class="QLabel" name="qlbF9" >
+            <property name="text" >
+             <string>F9</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0" >
+           <widget class="QLabel" name="qlbF10" >
+            <property name="text" >
+             <string>F10</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0" >
+           <widget class="QLabel" name="qlbF11" >
+            <property name="text" >
+             <string>F11</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0" >
+           <widget class="QLabel" name="qlbF12" >
+            <property name="text" >
+             <string>F12</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" >
+           <widget class="QLineEdit" name="qleMacroF4" />
+          </item>
+          <item row="2" column="1" >
+           <widget class="QLineEdit" name="qleMacroF3" />
+          </item>
+          <item row="1" column="1" >
+           <widget class="QLineEdit" name="qleMacroF2" />
+          </item>
+          <item row="0" column="1" >
+           <widget class="QLineEdit" name="qleMacroF1" />
+          </item>
+          <item row="4" column="1" >
+           <widget class="QLineEdit" name="qleMacroF5" />
+          </item>
+          <item row="5" column="1" >
+           <widget class="QLineEdit" name="qleMacroF6" />
+          </item>
+          <item row="6" column="1" >
+           <widget class="QLineEdit" name="qleMacroF7" />
+          </item>
+          <item row="7" column="1" >
+           <widget class="QLineEdit" name="qleMacroF8" />
+          </item>
+          <item row="8" column="1" >
+           <widget class="QLineEdit" name="qleMacroF9" />
+          </item>
+          <item row="9" column="1" >
+           <widget class="QLineEdit" name="qleMacroF10" />
+          </item>
+          <item row="10" column="1" >
+           <widget class="QLineEdit" name="qleMacroF11" />
+          </item>
+          <item row="11" column="1" >
+           <widget class="QLineEdit" name="qleMacroF12" />
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3" >
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0" >
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>553</width>
+        <height>488</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5" >
+       <item>
+        <widget class="QGroupBox" name="qgbChatTemplates" >
+         <property name="title" >
+          <string>Chat Templates</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6" >
+          <property name="topMargin" >
+           <number>3</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="qlbChatTemplate" >
+            <property name="text" >
+             <string>Chat</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="qleChatTemplate" />
+          </item>
+          <item>
+           <widget class="MTextBrowser" name="mtbChatTemplate" >
+            <property name="maximumSize" >
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="openLinks" >
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="qlbEmoteTemplate" >
+            <property name="text" >
+             <string>Emote</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="qleEmoteTemplate" />
+          </item>
+          <item>
+           <widget class="MTextBrowser" name="mtbEmoteTemplate" >
+            <property name="maximumSize" >
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="openLinks" >
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="qlbMessageTemplate" >
+            <property name="text" >
+             <string>Messages</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="qleMessageTemplate" />
+          </item>
+          <item>
+           <widget class="MTextBrowser" name="mtbMessageTemplate" >
+            <property name="maximumSize" >
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="qlbPlainTemplate" >
+            <property name="text" >
+             <string>Plain</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="qlePlainTemplate" />
+          </item>
+          <item>
+           <widget class="MTextBrowser" name="mtbPlainTemplate" >
+            <property name="maximumSize" >
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="openLinks" >
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" >
+     <property name="margin" >
+      <number>2</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="qpbSave" >
+       <property name="text" >
+        <string>&amp;Save</string>
+       </property>
+       <property name="shortcut" >
+        <string>Alt+S</string>
+       </property>
+       <property name="default" >
+        <bool>true</bool>
+       </property>
+       <property name="flat" >
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="qpbCancel" >
+       <property name="text" >
+        <string>&amp;Cancel</string>
+       </property>
+       <property name="shortcut" >
+        <string>Alt+C</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+  <zorder>qlwPages</zorder>
+  <zorder>qswPages</zorder>
+  <zorder>qleImageMaxWidth</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MTextBrowser</class>
+   <extends>QTextBrowser</extends>
+   <header>MTextBrowser.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>qlwPages</tabstop>
+  <tabstop>qleUserName</tabstop>
+  <tabstop>qleTextName</tabstop>
+  <tabstop>mtbChatName</tabstop>
+  <tabstop>qpbBrowseAvatar</tabstop>
+  <tabstop>qleUserToken</tabstop>
+  <tabstop>qpbGenerateToken</tabstop>
+  <tabstop>qcbAllowUserFonts</tabstop>
+  <tabstop>qcbShowJoinLeave</tabstop>
+  <tabstop>qcbMessageWindows</tabstop>
+  <tabstop>qcbLocalEcho</tabstop>
+  <tabstop>qcbTimestamps</tabstop>
+  <tabstop>qleTimestampFormat</tabstop>
+  <tabstop>qleCurrentTimestamp</tabstop>
+  <tabstop>qcbLogging</tabstop>
+  <tabstop>qleLogFile</tabstop>
+  <tabstop>qleCurrentLogFile</tabstop>
+  <tabstop>qleServer</tabstop>
+  <tabstop>qleBackupServer</tabstop>
+  <tabstop>qcbHeartbeat</tabstop>
+  <tabstop>qleHeartbeatTimeout</tabstop>
+  <tabstop>qleDataPort</tabstop>
+  <tabstop>qleUserExample</tabstop>
+  <tabstop>qpbUserColor</tabstop>
+  <tabstop>qpbUserFont</tabstop>
+  <tabstop>qleDefaultExample</tabstop>
+  <tabstop>qpbDefaultColor</tabstop>
+  <tabstop>qpbDefaultFont</tabstop>
+  <tabstop>qleMessageExample</tabstop>
+  <tabstop>qpbMessageColor</tabstop>
+  <tabstop>qpbMessageFont</tabstop>
+  <tabstop>qleSystemExample</tabstop>
+  <tabstop>qpbSystemColor</tabstop>
+  <tabstop>qpbSystemFont</tabstop>
+  <tabstop>qleLinkExample</tabstop>
+  <tabstop>qpbLinkColor</tabstop>
+  <tabstop>qpbBackgroundColor</tabstop>
+  <tabstop>qpbSave</tabstop>
+  <tabstop>qpbCancel</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../resources/MaraSettingsDialog.qrc" />
+ </resources>
+ <connections>
+  <connection>
+   <sender>qpbCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>MaraSettingsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>550</x>
+     <y>595</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>249</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>qcbLogging</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>qleCurrentLogFile</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>89</x>
+     <y>357</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>413</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>qcbLogging</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>qleLogFile</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>89</x>
+     <y>357</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>270</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>qcbTimestamps</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>qleTimestampFormat</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>71</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>256</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>qcbTimestamps</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>qleCurrentTimestamp</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>71</x>
+     <y>324</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>433</x>
+     <y>324</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
